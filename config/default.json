@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://APSignals_agile:74r16xSIxeQfSIWO@aps-agile.kof3g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://APSignals_agile:74r16xSIxeQfSIWO@aps-agile.kof3g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
