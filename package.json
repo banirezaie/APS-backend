@@ -5,7 +5,9 @@
   "main": "lib/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon lib/server.js"
+    "server": "nodemon lib/server.js",
+    "front-end": "npm start --prefix front-end",
+    "concurrently": "concurrently \"npm run server\" \"npm run front-end\""
   },
   "repository": {
     "type": "git",
@@ -25,13 +27,13 @@
     "gravatar": "^1.8.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.7",
-    "request": "^2.88.2"
+    "needle": "^3.0.0"
   },
   "devDependencies": {
     "concurrently": "^6.2.1",
     "nodemon": "^2.0.12"
   },
-    "nodemonConfig": {
+  "nodemonConfig": {
     "restartable": "rs",
     "delay": 2500,
     "env": {
