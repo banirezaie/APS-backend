@@ -8,8 +8,8 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 
 /**
- * @route POST api/users
- * @desc Register user
+ * @route  POST api/users
+ * @desc   Register user
  * @access Public
  */
 router.post(
@@ -29,6 +29,7 @@ router.post(
     }
 
     const { name, email, password } = req.body;
+
     try {
       //see if user exists
       let user = await User.findOne({ email: email });
@@ -76,6 +77,9 @@ router.post(
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server Error");
+      //200 OK
+      //400 - 499 undefined - unauthorized - access denied (404) -... err
+      //500 Server Error
     }
   }
 );
